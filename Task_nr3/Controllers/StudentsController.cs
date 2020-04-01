@@ -55,19 +55,19 @@ namespace Task_nr3.Controllers
             return Ok(student);
         }
         [HttpPut("{id}")]
-        public IActionResult UpdateStudent(Student student)
+        public IActionResult UpdateStudent(int id)
         {
 
 
-            return Ok("Updated complete");
+            if (id == 1) { return Ok("Delete completed"); }
+            else return NotFound("Student not found");
         }
 
         [HttpDelete("{id}")]
-        public IActionResult DeleteStudent(Student student)
+        public IActionResult DeleteStudent(int id)
         {
-
-
-            return Ok("Delete complete");
+            if (id == 1) { return Ok("Delete completed"); }
+            else return NotFound("Student not found");
         }
 
     }
