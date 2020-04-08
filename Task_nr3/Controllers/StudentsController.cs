@@ -13,11 +13,11 @@ namespace Task_nr3.Controllers
    
     public class StudentsController : ControllerBase
     {
-        private readonly IDbService _dbService;
+        private readonly IDbService studentData;
 
-        public StudentsController(IDbService dbService)
+        public StudentsController (MockDbService db)
         {
-            _dbService = dbService;
+            studentData = db;
         }
 
         //2. Passing the data by QueryString = limited, friendly urls
@@ -25,7 +25,7 @@ namespace Task_nr3.Controllers
         [HttpGet]
         public IActionResult GetStudents(string orderBy) //action method
         {
-            return Ok(_dbService.GetStudents());
+            return Ok(studentData.GetStudents());
         }
 
         //1. How to pass data using URL segment?

@@ -16,8 +16,8 @@ namespace Task_nr3.DAL
             _students = new List<Student>
             {
                 new Student{IdStudent=1, FirstName="Jan", LastName="Kowalski", IndexNumber="s1234"},
-                new Student{IdStudent=2, FirstName="Anna", LastName="Malewska", IndexNumber="s3446"},
-                new Student{IdStudent=3, FirstName="Malewska", LastName="Andrzejewicz", IndexNumber="s5644"}
+                new Student{IdStudent=2, FirstName="Anna", LastName="Kaczyńska", IndexNumber="s3446"},
+                new Student{IdStudent=3, FirstName="Mateusz", LastName="Tusk", IndexNumber="s5644"}
             };
         }
 
